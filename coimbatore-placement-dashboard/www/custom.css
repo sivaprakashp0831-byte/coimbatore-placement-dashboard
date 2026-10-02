@@ -1,0 +1,114 @@
+/* ===== Base ===== */
+body {
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.bslib-page-title, .navbar-brand, .bslib-page-main > header {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* ===== Sidebar (dark) ===== */
+.bslib-sidebar-layout > .sidebar {
+  background: #0f172a !important;
+  color: #e2e8f0;
+}
+.sidebar .control-label,
+.sidebar label,
+.sidebar .checkbox label,
+.sidebar .form-check-label {
+  color: #cbd5e1;
+  font-size: 0.88rem;
+}
+.sidebar .form-group { margin-bottom: 0.9rem; }
+
+.brand { display: flex; align-items: center; gap: 12px; margin-bottom: 1.2rem; }
+.brand-mark {
+  width: 42px; height: 42px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #6366f1, #06b6d4);
+  color: #fff; font-size: 1.15rem;
+}
+.brand-title { font-weight: 700; font-size: 1.1rem; color: #fff; line-height: 1.1; }
+.brand-sub   { font-size: 0.74rem; color: #94a3b8; }
+
+.side-label {
+  font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: #64748b; margin: 1.1rem 0 0.5rem; font-weight: 600;
+}
+
+/* Sidebar navigation (radio buttons styled as nav links) */
+#nav .shiny-options-group { display: flex; flex-direction: column; gap: 4px; }
+#nav .radio, #nav .form-check { margin: 0; padding: 0; }
+#nav label {
+  display: flex; align-items: center; gap: 10px;
+  width: 100%; margin: 0; padding: 10px 14px;
+  border-radius: 10px; cursor: pointer;
+  color: #cbd5e1; font-size: 0.95rem; font-weight: 500;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+#nav label:hover { background: rgba(255, 255, 255, 0.07); color: #fff; }
+#nav input[type="radio"] { position: absolute; opacity: 0; pointer-events: none; }
+#nav input:checked + span { color: #fff; font-weight: 600; }
+#nav label:has(input:checked) {
+  background: linear-gradient(90deg, rgba(99, 102, 241, 0.55), rgba(99, 102, 241, 0.15));
+  box-shadow: inset 3px 0 0 #818cf8;
+}
+#nav label i, #nav label svg { width: 1.1em; text-align: center; }
+
+/* Sliders on dark background */
+.sidebar .irs--shiny .irs-bar { background: #6366f1; border-color: #6366f1; }
+.sidebar .irs--shiny .irs-handle { border-color: #6366f1; background: #fff; }
+.sidebar .irs--shiny .irs-from,
+.sidebar .irs--shiny .irs-to,
+.sidebar .irs--shiny .irs-single { background: #6366f1; }
+.sidebar .irs--shiny .irs-line { background: #334155; border-color: #334155; }
+.sidebar .irs--shiny .irs-min,
+.sidebar .irs--shiny .irs-max { background: rgba(255, 255, 255, 0.08); color: #cbd5e1; }
+.sidebar .irs--shiny .irs-grid-text { color: #94a3b8; }
+
+.side-actions { margin-top: 1rem; }
+.side-foot { margin-top: 1.4rem; font-size: 0.72rem; color: #64748b; line-height: 1.4; }
+
+/* ===== Main content ===== */
+.page-head { margin: 0.25rem 0 1rem; }
+.page-head h2 { font-size: 1.55rem; font-weight: 700; margin-bottom: 0.15rem; letter-spacing: -0.01em; }
+.page-head p  { color: #64748b; margin: 0; }
+
+.card {
+  border: none !important;
+  border-radius: 14px !important;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.07), 0 10px 28px rgba(15, 23, 42, 0.05);
+  margin-bottom: 0.25rem;
+}
+.card-header {
+  background: #ffffff !important;
+  border-bottom: 1px solid #eef2f7 !important;
+  font-weight: 600;
+  color: #1e293b;
+  border-radius: 14px 14px 0 0 !important;
+}
+
+.bslib-value-box { border-radius: 14px !important; border: none !important; }
+.bslib-value-box .value-box-title { font-size: 0.85rem; opacity: 0.9; font-weight: 500; }
+.bslib-value-box .value-box-value { font-weight: 700; letter-spacing: -0.01em; }
+
+.tab-content { padding-top: 0.25rem; }
+.bslib-grid { margin-bottom: 0.75rem; }
+
+/* ===== DataTables ===== */
+table.dataTable thead th {
+  background: #f8fafc;
+  color: #475569;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+table.dataTable tbody td { vertical-align: middle; font-size: 0.92rem; }
+.dataTables_wrapper { font-size: 0.9rem; }
+
+/* Validation messages */
+.shiny-output-error-validation { color: #64748b; font-style: italic; padding: 1rem; }
